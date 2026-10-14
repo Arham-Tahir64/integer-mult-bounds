@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "scripts/research_package.py",
+    "tests/test_research_source_blobs.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Same-fixture legacy/current exact validation, nine rejection controls, historical provenance, fresh live-input reads and 69-to-2 process count"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_research_source_blobs.py",
+        "-v"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Literal/binary/empty/duplicate Git blob transport, fresh bases, missing paths, eight malformed responses, nonzero exit and child cleanup"
+    }
+  ]
+}

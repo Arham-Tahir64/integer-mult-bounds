@@ -4,6 +4,7 @@
 Douglas Colkitt, with OpenAI Codex assistance. Apache-2.0.
 """
 import argparse
+from contextlib import contextmanager
 import hashlib
 import importlib.metadata
 import json
@@ -13,6 +14,7 @@ import re
 import signal
 import subprocess
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -33,6 +35,57 @@ def relative_file(root, name):
 
 def git(root, *args):
     return subprocess.run(["git", *args], cwd=root, capture_output=True, check=True).stdout
+
+
+@contextmanager
+def source_blobs(root, base, names):
+    """Read exact pinned blobs through two Git processes, without caching checks.
+
+    Resolve literal paths with NUL-delimited ls-tree records, then send only
+    object IDs to cat-file. Read one blob at a time so memory does not grow
+    with the total inventory size. Every validation opens a fresh reader.
+    """
+    tree = git(root, "--literal-pathspecs", "ls-tree", "-rz", "--full-tree",
+               base, "--", *dict.fromkeys(names))
+    objects = {}
+    for record in tree.split(b"\0"):
+        if record:
+            metadata, name = record.split(b"\t", 1)
+            _, kind, obj = metadata.split()
+            objects[name.decode()] = (kind, obj)
+    for name in names:
+        require(name in objects and objects[name][0] == b"blob",
+                "missing source blob: " + name)
+    with tempfile.TemporaryFile() as errors:
+        process = subprocess.Popen(["git", "cat-file", "--batch"], cwd=root,
+                                   stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                                   stderr=errors)
+        try:
+            def read(name):
+                obj = objects[name][1]
+                process.stdin.write(obj + b"\n")
+                process.stdin.flush()
+                header = process.stdout.readline().split()
+                require(len(header) == 3 and header[:2] == [obj, b"blob"]
+                        and header[2].isdigit(), "invalid source blob header: " + name)
+                size = int(header[2])
+                payload = process.stdout.read(size)
+                require(len(payload) == size and process.stdout.read(1) == b"\n",
+                        "truncated source blob: " + name)
+                return obj.decode(), payload
+            yield read
+            process.stdin.close()
+            code = process.wait()
+            if code:
+                errors.seek(0)
+                raise subprocess.CalledProcessError(code, process.args, stderr=errors.read())
+        finally:
+            if process.poll() is None:
+                process.kill()
+            process.wait()
+            process.stdout.close()
+            if not process.stdin.closed:
+                process.stdin.close()
 
 
 def meaningful(value):
@@ -96,19 +149,22 @@ def validate(root, package, check_pins=True):
     require({r["path"] for r in sources["files"] if r["usage"] == "input"} <= set(inputs),
             "all live pinned inputs must be declared CI inputs")
     if check_pins:
+        catalog_name = "docs/research/agent-task-catalog.json"
+        require(catalog_name in {r["path"] for r in sources["files"]}, "pin the originating task catalogue")
         for row in sources["files"]:
             name = row["path"]
             p = PurePosixPath(name)
             require(not p.is_absolute() and ".." not in p.parts, "invalid source path")
-            obj = git(root, "rev-parse", sources["base_commit"] + ":" + name).decode().strip()
-            require(obj == row["git_blob"], "source blob provenance mismatch: " + name)
-            pinned = git(root, "show", sources["base_commit"] + ":" + name)
-            require(hashlib.sha256(pinned).hexdigest() == row["sha256"], "source SHA256 provenance mismatch: " + name)
-            if row["usage"] == "input":
-                require(pinned == relative_file(root, name).read_bytes(), "working source drift: " + name)
-        catalog_name = "docs/research/agent-task-catalog.json"
-        require(catalog_name in {r["path"] for r in sources["files"]}, "pin the originating task catalogue")
-        catalog = json.loads(git(root, "show", sources["base_commit"] + ":" + catalog_name))
+        with source_blobs(root, sources["base_commit"], [r["path"] for r in sources["files"]]) as read:
+            for row in sources["files"]:
+                name = row["path"]
+                obj, pinned = read(name)
+                require(obj == row["git_blob"], "source blob provenance mismatch: " + name)
+                require(hashlib.sha256(pinned).hexdigest() == row["sha256"], "source SHA256 provenance mismatch: " + name)
+                if row["usage"] == "input":
+                    require(pinned == relative_file(root, name).read_bytes(), "working source drift: " + name)
+                if name == catalog_name:
+                    catalog = json.loads(pinned)
         cards = [t for tr in catalog["tracks"] for t in tr["tasks"] if t["id"] == task["task_id"]]
         require(len(cards) == 1 and task["original_card"] == cards[0], "original card does not match pinned catalogue")
     return task, manifest

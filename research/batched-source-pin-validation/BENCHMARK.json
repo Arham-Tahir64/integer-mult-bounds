@@ -1,0 +1,126 @@
+{
+  "base_commit": "c5108f0f68d482e5712a8e26a5978d47762dfc16",
+  "fixture": "34 pinned sources; 32 binary live inputs of 4097 bytes",
+  "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": "git version 2.45.1.windows.1",
+  "source_sha256": "d7e12e93799b3e244d74de5cb979855efd5307a088854e52cdb32ce1d4f7646f",
+  "candidate_sha256": "913332d1e08613bf0c7079afb92ec9148707e77b9b472001b7cd96a7d58a401c",
+  "controls": [
+    "wrong blob",
+    "wrong SHA256",
+    "missing pinned source",
+    "wrong base",
+    "missing catalogue",
+    "undeclared live input",
+    "altered original card",
+    "scope drift",
+    "working drift after successful validation"
+  ],
+  "pairs": [
+    {
+      "order": [
+        "reference",
+        "batched"
+      ],
+      "reference": {
+        "seconds": 1.913949300069362,
+        "processes": 69
+      },
+      "batched": {
+        "seconds": 0.07001970009878278,
+        "processes": 2
+      }
+    },
+    {
+      "order": [
+        "batched",
+        "reference"
+      ],
+      "batched": {
+        "seconds": 0.07109529990702868,
+        "processes": 2
+      },
+      "reference": {
+        "seconds": 1.8299978002905846,
+        "processes": 69
+      }
+    },
+    {
+      "order": [
+        "reference",
+        "batched"
+      ],
+      "reference": {
+        "seconds": 1.930119600147009,
+        "processes": 69
+      },
+      "batched": {
+        "seconds": 0.07130729965865612,
+        "processes": 2
+      }
+    },
+    {
+      "order": [
+        "batched",
+        "reference"
+      ],
+      "batched": {
+        "seconds": 0.0762702003121376,
+        "processes": 2
+      },
+      "reference": {
+        "seconds": 1.9400963000953197,
+        "processes": 69
+      }
+    },
+    {
+      "order": [
+        "reference",
+        "batched"
+      ],
+      "reference": {
+        "seconds": 1.9281271998770535,
+        "processes": 69
+      },
+      "batched": {
+        "seconds": 0.07313879998400807,
+        "processes": 2
+      }
+    },
+    {
+      "order": [
+        "batched",
+        "reference"
+      ],
+      "batched": {
+        "seconds": 0.07327689975500107,
+        "processes": 2
+      },
+      "reference": {
+        "seconds": 1.820121799595654,
+        "processes": 69
+      }
+    },
+    {
+      "order": [
+        "reference",
+        "batched"
+      ],
+      "reference": {
+        "seconds": 1.9410115000791848,
+        "processes": 69
+      },
+      "batched": {
+        "seconds": 0.09163070004433393,
+        "processes": 2
+      }
+    }
+  ],
+  "median_seconds": {
+    "reference": 1.9281271998770535,
+    "batched": 0.07313879998400807
+  },
+  "median_speedup": 26.362576365740782,
+  "scope": "Metadata/source-pin validation only, not circuit replay or kappa. No timing threshold."
+}

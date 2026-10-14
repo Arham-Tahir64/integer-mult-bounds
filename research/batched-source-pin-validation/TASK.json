@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 2,
+  "base_commit": "c5108f0f68d482e5712a8e26a5978d47762dfc16",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected reproduction command and choose a single replay stage for profiling.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Batch immutable Git source reads in registered-package metadata validation while rechecking every pin and live input on each invocation.",
+  "scope_change_reason": "The selected runtime card is narrowed to the metadata stage of opt-in research replay. Reuse is only a per-invocation Git transport; no successful proof/validation result or live bytes are cached. This is verifier throughput tooling, not a selected-circuit optimization.",
+  "bottleneck_link": "Fewer Git startup costs make independently reviewable source-bound packages cheaper to validate. Mathematical command coverage, input invalidation and the selected frontier are unchanged.",
+  "budget_minutes": 60,
+  "stop_rule": "One implementation and one fixed 34-source fixture; seven alternating benchmark pairs, exact decision equivalence, source-drift and malformed-protocol controls. Stop if exact checks cannot be preserved or if no measurable gain remains.",
+  "outcome": "completed",
+  "evidence": "Seven alternating-order benchmark pairs: 1.928127s to 0.073139s median (26.36x) on the identical 34-source fixture. All nine validation rejection controls and seven focused transport tests pass, including eight malformed responses, fresh live bytes and child cleanup. Metadata and selected source-binding checks pass. Windows timeout failure independently reproduced with exact original implementation; Python 3.12 and Linux replay remain unrun.",
+  "author": "Arham Tahir",
+  "ai_assistance": "Substantial OpenAI Codex assistance in design, implementation, tests, measurement and writing; no independent human or subagent review.",
+  "open_questions": [
+    {
+      "question": "How much does batched validation save on large real contributed manifests on Linux CI?",
+      "why_it_matters": "The controlled local fixture isolates Git process overhead but cannot predict all platforms, pack layouts or complete replay timings.",
+      "first_step": "Run this identical-fixture benchmark on Linux and compare full package metadata validation on one accepted large manifest.",
+      "blocked_by": "Requires representative accepted manifests and hosted measurements; no timing threshold should be used for mathematical acceptance."
+    }
+  ],
+  "selection_nonce": "8b38097fe434074e63862edfb3f66d26",
+  "selected_method": "Design source-bound reuse with explicit dependency invalidation and negative controls.",
+  "concrete_object": "scripts/research_package.py validate(check_pins=True), exact base source and fixed 34-source fixture",
+  "method_domain": "Literal NUL-delimited Git tree lookup plus one streaming cat-file process; arbitrary blob bytes; all pin rows, including duplicate IDs. No persistent cache.",
+  "expected_improvement": "Reduce 2N+1 Git processes to two for N source pins; preserve acceptance/rejection and strict live byte equality.",
+  "coordination": {
+    "claim": "Local TASK card; Discussion tools are unavailable through the connector. Credential-based Discussion access was rejected by automatic approval review and was not retried.",
+    "read": [
+      "https://github.com/CrocSwap/integer-mult-bounds/discussions/1163",
+      "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166",
+      "https://github.com/CrocSwap/integer-mult-bounds/discussions/1167"
+    ],
+    "coverage": "Connected GitHub REST read paginated 718 open-PR rows across pages 1..8 (page 9 empty); public active Discussion list and coordination threads read. Discussion comment pagination and code-diff search were not complete. No match is not proof of novelty."
+  },
+  "predecessor_credit": "Douglas Colkitt/OpenAI Codex wrote research_package.py and the onboarding workflow. Maxime Fleury/Antoine Olivier provide the source-pin versus regenerated-payload convention. PR797 independently improves a different compiler bottleneck; PR1559 repairs selected-bit gzip comparisons, a distinct portability scope.",
+  "final_overlap": {
+    "checked_at": "2026-10-14T03:12:23.365Z",
+    "source": "Connected GitHub REST fetch",
+    "open_pr_rows": 725,
+    "unique_prs": 725,
+    "pages": [
+      {
+        "page": 1,
+        "count": 100
+      },
+      {
+        "page": 2,
+        "count": 100
+      },
+      {
+        "page": 3,
+        "count": 100
+      },
+      {
+        "page": 4,
+        "count": 100
+      },
+      {
+        "page": 5,
+        "count": 100
+      },
+      {
+        "page": 6,
+        "count": 100
+      },
+      {
+        "page": 7,
+        "count": 100
+      },
+      {
+        "page": 8,
+        "count": 25
+      },
+      {
+        "page": 9,
+        "count": 0
+      }
+    ],
+    "terms": [
+      "cat-file",
+      "batch git",
+      "metadata validation",
+      "source-pin validation",
+      "cache invalidation",
+      "replay runtime",
+      "isolated tests"
+    ],
+    "matches": [
+      {
+        "number": 1564,
+        "title": "Scoped negative result: affine seven-cube copy floor 128 and peak tradeoff",
+        "head": "ecaca2048a0f18dbc315513c023415eacce2216d",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/1564",
+        "author": "bbMisk"
+      },
+      {
+        "number": 1535,
+        "title": "Research: independently certify the B509 inverse-frame obstruction",
+        "head": "274dc01bbe537da6b3173fd8da2512860b5e0626",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/1535",
+        "author": "CubeJerry"
+      },
+      {
+        "number": 1417,
+        "title": "Scoped obstruction: sharp P112 endpoint dimension and complete linear-lift cost",
+        "head": "c755bf393bea26d2275e1516b0560ca92de7a52e",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/1417",
+        "author": "aliromman"
+      },
+      {
+        "number": 797,
+        "title": "Tooling: filter default reclamation candidates before sorting",
+        "head": "b879e8472547bd820ce81b1b9c0463176fe5151c",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/797",
+        "author": "aliromman"
+      }
+    ],
+    "limits": "Open PR titles and bodies including drafts, complete observed pagination. Live listing is not an atomic snapshot. Discussion comments and code diffs are not exhaustively searched.",
+    "nearest": [
+      {
+        "number": 797,
+        "title": "Tooling: filter default reclamation candidates before sorting",
+        "head": "b879e8472547bd820ce81b1b9c0463176fe5151c",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/797",
+        "author": "aliromman",
+        "state": "open",
+        "why_distinct": "Compiler sorting optimization; different stage, fixture and code."
+      },
+      {
+        "number": 1559,
+        "title": "Tooling: preserve full payloads in PR589 gzip rebuild comparisons",
+        "head": "c4f8af1dcf9fc2317c893b6b250007ded5ef879f",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/1559",
+        "author": "bbMisk",
+        "state": "open",
+        "why_distinct": "Portable selected-bit gzip comparison; no package pin-read batching."
+      }
+    ]
+  },
+  "local_overlap": {
+    "helper": "python -B scripts/find_overlap.py --task replay-runtime --offline --json",
+    "records": 330,
+    "matches": "Only this new package matched the selected task terms. Exact targeted rg searches additionally found incidental Git provenance references.",
+    "limits": "No usable remote helper cache; remote PR coverage is supplied separately by the connected GitHub reads. Public board read only; comments not exhaustively paginated."
+  }
+}
