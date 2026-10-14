@@ -13,6 +13,10 @@ source hashes and process counts. These are local metadata timings, not a
 complete circuit-replay speedup or a cross-platform guarantee. There is no
 timing threshold in acceptance.
 
+The receipt distinguishes the candidate's clean Git blob from its local checkout
+SHA256, which includes this host's line endings. Baseline source pins bind the
+exact historical Git bytes; no input pin is relaxed for newline conversion.
+
 ## Exact coverage and scope
 
 The implementation changes `scripts/research_package.py` at its source

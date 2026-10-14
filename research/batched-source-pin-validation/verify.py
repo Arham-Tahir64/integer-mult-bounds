@@ -166,7 +166,9 @@ def main():
             medians = {k: statistics.median(row[k]["seconds"] for row in rows) for k in ("reference", "batched")}
             receipt = dict(base_commit=BASE, fixture="34 pinned sources; 32 binary live inputs of 4097 bytes",
                            python=sys.version, platform=platform.platform(), git=current.git(ROOT, "--version").decode().strip(),
-                           source_sha256=pin["sha256"], candidate_sha256=hashlib.sha256((ROOT / "scripts/research_package.py").read_bytes()).hexdigest(),
+                           source_sha256=pin["sha256"],
+                           candidate_checkout_sha256=hashlib.sha256((ROOT / "scripts/research_package.py").read_bytes()).hexdigest(),
+                           candidate_git_blob=current.git(ROOT, "hash-object", "--path=scripts/research_package.py", "scripts/research_package.py").decode().strip(),
                            controls=controls, pairs=rows, median_seconds=medians,
                            median_speedup=medians["reference"] / medians["batched"],
                            scope="Metadata/source-pin validation only, not circuit replay or kappa. No timing threshold.")
