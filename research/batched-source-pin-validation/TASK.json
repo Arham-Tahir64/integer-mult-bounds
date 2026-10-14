@@ -182,5 +182,12 @@
     "records": 330,
     "matches": "Only this new package matched the selected task terms. Exact targeted rg searches additionally found incidental Git provenance references.",
     "limits": "No usable remote helper cache; remote PR coverage is supplied separately by the connected GitHub reads. Public board read only; comments not exhaustively paginated."
+  },
+  "submission": {
+    "branch": "Arham-Tahir64:codex/independent-result-20261013",
+    "code_and_evidence_commit": "ae4a240bac8188455dc36b2a59d4af560fc4f3ff",
+    "comparison": "https://github.com/CrocSwap/integer-mult-bounds/compare/main...Arham-Tahir64:integer-mult-bounds:codex/independent-result-20261013?expand=1",
+    "upstream_pr": null,
+    "blocker": "Upstream PR creation returned HTTP 403 Resource not accessible by integration; the available browser is signed out. Published branch is the reviewable handoff."
   }
 }

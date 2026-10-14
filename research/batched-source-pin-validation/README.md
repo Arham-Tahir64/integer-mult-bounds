@@ -95,7 +95,13 @@ selected-bit gzip comparisons. Neither supplies this source-read optimization.
 
 A local task card was used because the connector exposes no Discussion posting
 tool. A credential-based access attempt was rejected by automatic approval
-review and was not retried. The focused PR supplies the result and handoff.
+review and was not retried. The public contribution branch supplies the handoff.
+
+Submission status: the validated branch is public at
+`Arham-Tahir64/integer-mult-bounds:codex/independent-result-20261013`. The GitHub
+connector rejected upstream PR creation with HTTP 403 (integration access),
+and the available browser was signed out. No upstream PR was created; the
+public branch comparison supplies an independently reviewable handoff.
 
 ## Open next questions
 
