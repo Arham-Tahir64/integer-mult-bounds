@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "PASS_P104_PHYSICAL_DUAL_INTRINSIC_ENDPOINTS",
+  "predecessor_head": "7953c9a8f788a8de5cf2ced63d9a61b67c22c6f1",
+  "predecessor_full_replay": true,
+  "public_roles": 358,
+  "predecessor_boundary_coefficients": 128164,
+  "input_X_adapters": 104,
+  "output_Y_adapters": 104,
+  "exact_monomial_columns": 106496,
+  "adapter_records_sha256": "4ded88f847885f058ee68182f95b01eebf2d8122ac4fe91596f3ef7fec11999a",
+  "added_positive_children": 0,
+  "added_rank_mass": 0,
+  "retained_positive_profile": {
+    "1": 1632,
+    "2": 74,
+    "3": 86,
+    "4": 104,
+    "5": 48,
+    "6": 42,
+    "7": 76,
+    "8": 8
+  },
+  "retained_rank_mass": 3542,
+  "retained_events": 5398,
+  "wrapped_event_count": 5606,
+  "retained_private_zero_erases": 8,
+  "controls": [
+    "wrapper global phase",
+    "unconjugated wrapper",
+    "adjoint instead of inverse transpose",
+    "missing wrapper",
+    "wrong port wrapper",
+    "unconjugated intrinsic input contract",
+    "reversed inverse-transpose product"
+  ],
+  "no_new_kappa": true
+}
