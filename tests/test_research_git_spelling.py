@@ -1,6 +1,7 @@
 """Git input spelling is exact, independent of filesystem alias resolution."""
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -44,12 +45,13 @@ class GitInputSpellingTests(unittest.TestCase):
         self.git("-c", "maintenance.auto=false", "-c", "gc.auto=0", "commit", "-qm", "fixture")
         return self.git("rev-parse", "HEAD").decode().strip()
 
-    def cli(self, base):
+    def cli(self, base, *, io_encoding="utf-8"):
         self.output.write_text("existing-output\n", encoding="utf-8")
         return subprocess.run(
             [sys.executable, "-B", str(self.root / "scripts/research_package.py"),
              "--changed-since", base, "--github-output", str(self.output)],
-            cwd=self.root, capture_output=True, text=True, encoding="utf-8", timeout=15, check=False)
+            cwd=self.root, capture_output=True, text=True, encoding="utf-8", timeout=15, check=False,
+            env={**os.environ, "PYTHONIOENCODING": io_encoding})
 
     def selected(self, base):
         result = self.cli(base)
@@ -126,6 +128,21 @@ class GitInputSpellingTests(unittest.TestCase):
         self.rejected(base, alias)
         self.manifest("alpha", [exact])
         self.assertEqual(self.selected(base), ["research/alpha"])
+
+    def test_cp1252_diagnostic_escapes_unencodable_alias(self):
+        # The CLI preserves a requested legacy output encoding and escapes
+        # characters it cannot represent. The ordinary helper requests UTF-8
+        # because it explicitly decodes the child's output as UTF-8.
+        self.write("src/caf\u00e9.json", b"original unicode\n")
+        base = self.commit()
+        alias = "src/cafe\u0301.json"
+        self.manifest("alpha", [alias])
+        result = self.cli(base, io_encoding="cp1252")
+        self.assertEqual(result.returncode, 1, result.stdout)
+        self.assertIn("exact Git-tracked input", result.stderr)
+        self.assertIn("src/cafe\\u0301.json", result.stderr)
+        self.assertEqual(result.stdout, "")
+        self.assertEqual(self.output.read_text(encoding="utf-8"), "existing-output\n")
 
     @unittest.skipIf(sys.platform == "win32", "Windows forbids control characters in filenames")
     def test_nul_framing_preserves_spaces_tabs_and_newlines(self):
