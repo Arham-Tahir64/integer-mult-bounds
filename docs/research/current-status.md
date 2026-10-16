@@ -10,9 +10,9 @@ Cold replay: `make frontier1094-verify`. This local review explicitly reuses the
 
 **Reviews since the #1094 selection.** These rounds retain scoped constructions,
 negative results, audits and tooling with individual credit, without changing the
-selected κ. The table records frozen review checkpoints, not live queue counts;
-later rounds can revisit older PRs. Use the [PR ledger](pr-ledger.md) for the
-current disposition of a specific contribution. The fifteenth round is ongoing.
+selected κ. The table records frozen review checkpoints at main `ffbd90dd9`
+(2026-10-16), not live queue counts; later rounds can revisit older PRs. Use the
+[PR ledger](pr-ledger.md) for the current disposition of a specific contribution.
 
 | Review | Frozen PR selection | Disposition |
 | --- | --- | --- |
@@ -30,7 +30,10 @@ current disposition of a specific contribution. The fifteenth round is ongoing.
 | [efficient1200](community-efficient1200-review.md) | #654–#2257 | 78 merged; 22 pending |
 | [efficient1300](community-efficient1300-review.md) | #1175–#2377 | 76 merged; 24 pending |
 | [efficient1400](community-efficient1400-review.md) | #1155–#2490 | 78 merged; 22 pending |
-| [efficient1500](community-efficient1500-review.md) | #1758–#2591 | Ongoing; see linked review |
+| [efficient1500](community-efficient1500-review.md) | #1758–#2591 | 76 merged; 24 pending |
+| [efficient1600](community-efficient1600-review.md) | #2592–#2715 | 83 merged; 17 pending |
+| [efficient1700](community-efficient1700-review.md) | #2478, #2716–#2828 | 66 merged; 34 pending |
+| [efficient1800](community-efficient1800-review.md) | 42 new/revised submissions, 58 earlier follow-ups | 15 merged; 85 pending |
 
 > **Below this point every section is a historical snapshot.** Inside them, “current,”
 > “selected,” “latest” and “next” refer to that snapshot's own checkpoint. The authoritative
