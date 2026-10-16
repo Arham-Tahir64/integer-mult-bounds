@@ -1,0 +1,114 @@
+{
+  "status": "PASS_NATIVE_WINDOWS_AUDIT_WITH_TEST_PROTOCOL_REPAIR",
+  "checked_at_utc": "2026-10-16T19:54:57.293108+00:00",
+  "audited_head": "3cb500b743f36e13d21b6a46f126846bf36bad32",
+  "historical_baseline": "836b19bfa309ceafbc8ee32a15e8c4b10dde7e11",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "native_stdout_encoding": "cp1252",
+  "native_stderr_encoding": "cp1252",
+  "git": "git version 2.45.1.windows.1",
+  "source_files": [
+    {
+      "path": "research/replay-input-head-spelling/README.md",
+      "sha256": "a6167bf5046687ef478d01dd4b9a6679fb645891471e7a0779ca29d2d155daf9",
+      "git_blob": "e526f2cea6669929502f87d3a7dc0d7e0e39d5e9"
+    },
+    {
+      "path": "research/replay-input-head-spelling/SOURCES.json",
+      "sha256": "ce70cc7c34cda6a771a890e51298a97d54e59ed7dc7755ea76236de48133d7ef",
+      "git_blob": "f8ed130884a7e8c3eb81d11f1ac584cf24631fb0"
+    },
+    {
+      "path": "research/replay-input-head-spelling/TASK.json",
+      "sha256": "aae6704dbc3a7695648cb7dc7affb96f738eb1665f12ea7c5880c53453b4c1f9",
+      "git_blob": "df63f0cbcde183868a1a2b4d1559b05d09a609c4"
+    },
+    {
+      "path": "research/replay-input-head-spelling/VERIFY.json",
+      "sha256": "61b53c1febfb2caf471622f80bbc845bb5ff531231cec312f39ad430f0198b33",
+      "git_blob": "2b00c98659d4e84b194f19c80cedf3955208c662"
+    },
+    {
+      "path": "research/replay-input-head-spelling/verify.py",
+      "sha256": "9e7ccf78a91242b0532c220ad194df27b1b12f9d62e2e3da0c237817ee45f2b3",
+      "git_blob": "7ab5d1682b98dd7e0f14abad7de19439c84e9fae"
+    },
+    {
+      "path": "scripts/find_overlap.py",
+      "sha256": "a11289dc1e0ce3500bddbb28f36fd24d15042808cdc422f14c2564658dbefb61",
+      "git_blob": "9afbfa99e5d2fd89abff02da1680b6176cbbba4b"
+    },
+    {
+      "path": "scripts/new_research_package.py",
+      "sha256": "7d300bf45baffced49d2bbea795ce3abe5f860f0dc1172845fc352b398331f34",
+      "git_blob": "eb1bdf8ff46b9ad2de1f85aa058a028735800395"
+    },
+    {
+      "path": "scripts/research_baseline.py",
+      "sha256": "59d9b04dc33e1bb3f81506d187243435de4902138a038b935e36ebaa5f37db67",
+      "git_blob": "6b607b36eefd65718120ade3c8187681f11bf879"
+    },
+    {
+      "path": "scripts/research_package.py",
+      "sha256": "9fa01de454181bee6d52d159e86ea0f1ba462ab5ef08eaec7284de8c84ee5249",
+      "git_blob": "fe0ce68e4f14f3a02abf728ed47d69dc4528c68f"
+    },
+    {
+      "path": "scripts/verify_selected_result.py",
+      "sha256": "c0cc23a8534d91c8d272195315c725213f13279815750ffdef055ec3adfbe911",
+      "git_blob": "200b5d535d5377cdb9e212fade3a7740b810105b"
+    },
+    {
+      "path": "tests/test_research_git_spelling.py",
+      "sha256": "5b21271c1daacb69f9214a4f6f22282cafbd232bf1a31b8e2e3c5c16f5df4153",
+      "git_blob": "38c2244e1c60c6a86bb39f556284d3def46144c9"
+    },
+    {
+      "path": "tests/test_research_input_paths.py",
+      "sha256": "066e44a20ffd314aebb4d0f9c4836e06482c5612318931e6b5aa0756f2dac9d2",
+      "git_blob": "e8fcf5a1831c9e3f61cb48369da15f855430ff9d"
+    },
+    {
+      "path": "tests/test_research_onboarding.py",
+      "sha256": "9de6225a720146027d4936f332d65d2f50c031279548969f1a8ea31fa3e08b96",
+      "git_blob": "22346dd55416b6afe2d1b6d97a4acdbd85f352b0"
+    }
+  ],
+  "registered_runs": [
+    {
+      "label": "original-cp1252",
+      "child_encoding": "cp1252",
+      "exit": 1,
+      "stdout_bytes": 448,
+      "stderr_bytes": 2531,
+      "stdout_sha256": "d522469c602acfe24fed4195c6854873b8b5a649ab0442841db2f8895fe2d02e",
+      "stderr_sha256": "ee3c15317ce0405635094907daf7298657ebe71d3d5a3d7694a5f0da5eefe071"
+    },
+    {
+      "label": "original-utf8",
+      "child_encoding": "utf-8",
+      "exit": 0,
+      "stdout_bytes": 631,
+      "stderr_bytes": 2532,
+      "stdout_sha256": "59fde977772c12d22190515eb20954e78c2511f4b29557cb93ed4926b6f1a9db",
+      "stderr_sha256": "9392e88a46797e40d95cd61353244ba7c0b5641198e12a7853bf66391ca7f809"
+    },
+    {
+      "label": "patched-cp1252",
+      "child_encoding": "cp1252",
+      "exit": 0,
+      "stdout_bytes": 631,
+      "stderr_bytes": 2532,
+      "stdout_sha256": "59fde977772c12d22190515eb20954e78c2511f4b29557cb93ed4926b6f1a9db",
+      "stderr_sha256": "3a956f90370146e477c286b6a0925de86ec1092b0dc956578e7400cd0e7f2084"
+    }
+  ],
+  "changed_source_rejected": "tests/test_research_git_spelling.py",
+  "raw_transcript_sha256": "2be948d28e911bf74f24f25dc70954a9c4f76a2089623cc070c9cdae8c063ddc",
+  "limits": [
+    "Original author's fixtures; no independent verifier or human review.",
+    "One intentional forbidden-control-character test skip per nine-group run.",
+    "Distinct tracked physical aliases, concurrent writes, hosted CI and supplier mathematics are outside scope."
+  ]
+}

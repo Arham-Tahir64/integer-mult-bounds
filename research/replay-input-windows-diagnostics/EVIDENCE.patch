@@ -1,0 +1,20 @@
+--- a/tests/test_research_git_spelling.py
++++ b/tests/test_research_git_spelling.py
+@@ -1,6 +1,7 @@
+ """Git input spelling is exact, independent of filesystem alias resolution."""
+ import importlib.util
+ import json
++import os
+ import subprocess
+ import sys
+ import tempfile
+@@ -49,7 +50,8 @@
+         return subprocess.run(
+             [sys.executable, "-B", str(self.root / "scripts/research_package.py"),
+              "--changed-since", base, "--github-output", str(self.output)],
+-            cwd=self.root, capture_output=True, text=True, encoding="utf-8", timeout=15, check=False)
++            cwd=self.root, capture_output=True, text=True, encoding="utf-8",
++            env={**os.environ, "PYTHONIOENCODING": "utf-8"}, timeout=15, check=False)
+ 
+     def selected(self, base):
+         result = self.cli(base)

@@ -1,0 +1,2 @@
+# The transcript binds raw stdout/stderr bytes, including native CRLF endings.
+EVIDENCE.txt -text -whitespace

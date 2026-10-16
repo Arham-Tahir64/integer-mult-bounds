@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "task_id": "portable-replay",
+  "selection": "Suitable open native-Windows handoff checked before task picker; no random card drawn.",
+  "base_commit": "d8e0f83f00191df62174b641e9fff055c357f641",
+  "priority_revision": 6,
+  "source_pr": 3007,
+  "source_head": "3cb500b743f36e13d21b6a46f126846bf36bad32",
+  "historical_baseline": "836b19bfa309ceafbc8ee32a15e8c4b10dde7e11",
+  "handoff": "https://github.com/CrocSwap/integer-mult-bounds/discussions/2983#discussioncomment-18980039",
+  "canonical_claim": "https://github.com/CrocSwap/integer-mult-bounds/discussions/2983#discussioncomment-18981668",
+  "scope_status": "refined",
+  "scope_change_reason": "The live handoff specifically requests native Windows execution of the pending exact-Git-spelling repair. A reproduced Unicode diagnostic mismatch justifies a test-protocol patch.",
+  "actual_scope": "Native Windows CP1252 diagnostic mismatch and a minimal subprocess-encoding test repair at one pinned PR head. The larger common platform/alias observation matrix is credited to concurrent evidence rather than rebuilt.",
+  "method": "Execute the author's source-authenticated registered fixtures under controlled CP1252/UTF-8 encodings, reproduce the mismatch, and rerun every registered control after the exact test-only patch.",
+  "declared_milestone": "independent platform execution and test portability repair attachment",
+  "bottleneck_link": "Prevents an environment-specific assertion failure from blocking replay of the proposed input-identity repair.",
+  "success_test": "Original CP1252 failure is reproduced; forcing writer/reader agreement preserves every assertion and all 13 executable tests pass with one intentional forbidden-filename skip.",
+  "stop_rule": "Stop after the exact registered handoff, one narrow test-protocol patch and its retained controls; do not expand into supplier or alias-census work.",
+  "budget": "One approximately 60-minute donation session; local replay subprocesses bounded at 120 seconds each.",
+  "outcome": "completed",
+  "evidence": [
+    "EVIDENCE.json",
+    "EVIDENCE.txt",
+    "EVIDENCE.patch",
+    "audit.py"
+  ],
+  "evidence_status": "author-checked native execution; no independent human review",
+  "entry_overlap": {
+    "open_prs_fetched_at": "2026-10-16T19:41:44.675975+00:00",
+    "open_pr_records": 277,
+    "discussions_fetched_at": "2026-10-16T19:42:19.466829+00:00",
+    "discussion_records": 1760,
+    "complete_pagination": true,
+    "nearest_work": [
+      2994,
+      3007
+    ],
+    "remaining_limits": "PR bodies and discussion text plus local notes/ledger; no exhaustive diff or closed-PR corpus scan. The native macOS result is credited; no active matching Windows claim was found."
+  },
+  "submission_checkpoint": {
+    "canonical_main": "d8e0f83f00191df62174b641e9fff055c357f641",
+    "source_pr_head_unchanged": true,
+    "open_prs_fetched_at": "2026-10-16T19:50:38.410908+00:00",
+    "open_pr_records": 279,
+    "discussions_fetched_at": "2026-10-16T19:51:16.065093+00:00",
+    "discussion_records": 1768,
+    "complete_pagination": true,
+    "concurrent_evidence": "e16c73710d350afe93ea0f174724dc89881defb1",
+    "scope_decision": "Narrow to the CP1252 failure/repair. The concurrent Windows attachment explicitly forces UTF-8 and is consistent with this audit's passing UTF-8 control. Do not claim exclusive or novel general Windows coverage.",
+    "concurrent_claims": [
+      "https://github.com/CrocSwap/integer-mult-bounds/discussions/2983#discussioncomment-18981656",
+      "https://github.com/CrocSwap/integer-mult-bounds/discussions/2983#discussioncomment-18981673"
+    ]
+  },
+  "ai_assistance": "Substantial OpenAI Codex assistance in execution, diagnosis, audit code, verification and writing.",
+  "open_questions": [
+    {
+      "question": "Will PR3007 adopt the attached explicit UTF-8 test subprocess protocol?",
+      "why_it_matters": "Its existing Unicode assertion fails under ordinary Windows CP1252 stderr despite correct production rejection.",
+      "first_step": "Apply EVIDENCE.patch at the pinned head and run the existing registered package on native Windows.",
+      "blocked_by": "Adoption by the pending dependency's author or maintainer; the patch is only attached here."
+    }
+  ]
+}
