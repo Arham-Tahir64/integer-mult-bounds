@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "orientation_main": "d8e0f83f00191df62174b641e9fff055c357f641",
+  "audited_head": "3cb500b743f36e13d21b6a46f126846bf36bad32",
+  "baseline_runner": "836b19bfa309ceafbc8ee32a15e8c4b10dde7e11",
+  "priority_revision": 6,
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "python": "3.12.14",
+    "git": "git version 2.45.1.windows.1",
+    "replay_pipe_encoding": "cp1252",
+    "PYTHONUTF8": "0",
+    "temporary_directory": "caller-provided writable Windows workspace"
+  },
+  "source_inventory": [
+    {
+      "path": "research/replay-input-head-spelling/README.md",
+      "audited_sha256": "a6167bf5046687ef478d01dd4b9a6679fb645891471e7a0779ca29d2d155daf9",
+      "working_sha256": "a6167bf5046687ef478d01dd4b9a6679fb645891471e7a0779ca29d2d155daf9"
+    },
+    {
+      "path": "research/replay-input-head-spelling/SOURCES.json",
+      "audited_sha256": "ce70cc7c34cda6a771a890e51298a97d54e59ed7dc7755ea76236de48133d7ef",
+      "working_sha256": "ce70cc7c34cda6a771a890e51298a97d54e59ed7dc7755ea76236de48133d7ef"
+    },
+    {
+      "path": "research/replay-input-head-spelling/TASK.json",
+      "audited_sha256": "aae6704dbc3a7695648cb7dc7affb96f738eb1665f12ea7c5880c53453b4c1f9",
+      "working_sha256": "aae6704dbc3a7695648cb7dc7affb96f738eb1665f12ea7c5880c53453b4c1f9"
+    },
+    {
+      "path": "research/replay-input-head-spelling/VERIFY.json",
+      "audited_sha256": "61b53c1febfb2caf471622f80bbc845bb5ff531231cec312f39ad430f0198b33",
+      "working_sha256": "61b53c1febfb2caf471622f80bbc845bb5ff531231cec312f39ad430f0198b33"
+    },
+    {
+      "path": "research/replay-input-head-spelling/verify.py",
+      "audited_sha256": "9e7ccf78a91242b0532c220ad194df27b1b12f9d62e2e3da0c237817ee45f2b3",
+      "working_sha256": "9e7ccf78a91242b0532c220ad194df27b1b12f9d62e2e3da0c237817ee45f2b3"
+    },
+    {
+      "path": "scripts/find_overlap.py",
+      "audited_sha256": "a11289dc1e0ce3500bddbb28f36fd24d15042808cdc422f14c2564658dbefb61",
+      "working_sha256": "a11289dc1e0ce3500bddbb28f36fd24d15042808cdc422f14c2564658dbefb61"
+    },
+    {
+      "path": "scripts/new_research_package.py",
+      "audited_sha256": "7d300bf45baffced49d2bbea795ce3abe5f860f0dc1172845fc352b398331f34",
+      "working_sha256": "7d300bf45baffced49d2bbea795ce3abe5f860f0dc1172845fc352b398331f34"
+    },
+    {
+      "path": "scripts/research_baseline.py",
+      "audited_sha256": "59d9b04dc33e1bb3f81506d187243435de4902138a038b935e36ebaa5f37db67",
+      "working_sha256": "59d9b04dc33e1bb3f81506d187243435de4902138a038b935e36ebaa5f37db67"
+    },
+    {
+      "path": "scripts/research_package.py",
+      "audited_sha256": "9fa01de454181bee6d52d159e86ea0f1ba462ab5ef08eaec7284de8c84ee5249",
+      "working_sha256": "9fa01de454181bee6d52d159e86ea0f1ba462ab5ef08eaec7284de8c84ee5249"
+    },
+    {
+      "path": "scripts/verify_selected_result.py",
+      "audited_sha256": "c0cc23a8534d91c8d272195315c725213f13279815750ffdef055ec3adfbe911",
+      "working_sha256": "c0cc23a8534d91c8d272195315c725213f13279815750ffdef055ec3adfbe911"
+    },
+    {
+      "path": "tests/test_research_git_spelling.py",
+      "audited_sha256": "5b21271c1daacb69f9214a4f6f22282cafbd232bf1a31b8e2e3c5c16f5df4153",
+      "working_sha256": "c82a7d9bcc3e3deb22803e76044309a334ba3fb0e60b75acb82289ec346cca23"
+    },
+    {
+      "path": "tests/test_research_input_paths.py",
+      "audited_sha256": "066e44a20ffd314aebb4d0f9c4836e06482c5612318931e6b5aa0756f2dac9d2",
+      "working_sha256": "066e44a20ffd314aebb4d0f9c4836e06482c5612318931e6b5aa0756f2dac9d2"
+    },
+    {
+      "path": "tests/test_research_onboarding.py",
+      "audited_sha256": "9de6225a720146027d4936f332d65d2f50c031279548969f1a8ea31fa3e08b96",
+      "working_sha256": "9de6225a720146027d4936f332d65d2f50c031279548969f1a8ea31fa3e08b96"
+    }
+  ],
+  "original_unicode_test": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "test_unicode_spelling_is_not_normalized (original_test.GitInputSpellingTests.test_unicode_spelling_is_not_normalized) ... FAIL\r\n\r\n======================================================================\r\nFAIL: test_unicode_spelling_is_not_normalized (original_test.GitInputSpellingTests.test_unicode_spelling_is_not_normalized)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"<TEMP>\\original_test.py\", line 126, in test_unicode_spelling_is_not_normalized\r\n    self.rejected(base, alias)\r\n  File \"<TEMP>\\original_test.py\", line 65, in rejected\r\n    self.assertIn(name, result.stderr)\r\nAssertionError: 'src/cafe\\u0301.json' not found in 'use an exact Git-tracked input path from HEAD: src/cafe\\\\u0301.json\\n'\r\n\r\n----------------------------------------------------------------------\r\nRan 1 test in 1.013s\r\n\r\nFAILED (failures=1)\r\n"
+  },
+  "repaired_registered_replay": {
+    "returncode": 0,
+    "stdout": "CHECK Source-authenticated main omission versus live repaired CLI on three aliases and canonical controls, with exact target-only Git diffs and no partial output.\r\nPASS_REPLAY_INPUT_HEAD_SPELLING baseline_omissions=3 repaired_rejections=3 canonical_controls=2\r\nCHECK Nine actual Git/CLI and full-metadata regression groups for exact HEAD identity, deleted parents, case-only renames, Unicode, whitespace, staged/untracked inputs and Git failures.\r\nCHECK Retain all five lexical-input and deletion controls with a committed fixture inventory.\r\nPASS_REGISTERED_RESEARCH_PACKAGE research/replay-input-head-spelling outcome=completed\r\n",
+    "stderr": "test_canonical_deleted_parent_and_unrelated_changes (test_research_git_spelling.GitInputSpellingTests.test_canonical_deleted_parent_and_unrelated_changes) ... ok\r\ntest_case_aliases_reject_a_target_only_git_diff (test_research_git_spelling.GitInputSpellingTests.test_case_aliases_reject_a_target_only_git_diff) ... ok\r\ntest_case_only_rename_selects_both_exact_consumers (test_research_git_spelling.GitInputSpellingTests.test_case_only_rename_selects_both_exact_consumers) ... ok\r\ntest_cp1252_diagnostic_escapes_unencodable_alias (test_research_git_spelling.GitInputSpellingTests.test_cp1252_diagnostic_escapes_unencodable_alias) ... ok\r\ntest_git_failure_cannot_publish_a_partial_matrix (test_research_git_spelling.GitInputSpellingTests.test_git_failure_cannot_publish_a_partial_matrix) ... ok\r\ntest_metadata_uses_the_same_exact_head_inventory (test_research_git_spelling.GitInputSpellingTests.test_metadata_uses_the_same_exact_head_inventory) ... ok\r\ntest_missing_head_cannot_publish_a_partial_matrix (test_research_git_spelling.GitInputSpellingTests.test_missing_head_cannot_publish_a_partial_matrix) ... ok\r\ntest_nul_framing_preserves_spaces_tabs_and_newlines (test_research_git_spelling.GitInputSpellingTests.test_nul_framing_preserves_spaces_tabs_and_newlines) ... skipped 'Windows forbids control characters in filenames'\r\ntest_unicode_spelling_is_not_normalized (test_research_git_spelling.GitInputSpellingTests.test_unicode_spelling_is_not_normalized) ... ok\r\ntest_untracked_and_staged_only_inputs_reject_until_committed (test_research_git_spelling.GitInputSpellingTests.test_untracked_and_staged_only_inputs_reject_until_committed) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 10 tests in 11.240s\r\n\r\nOK (skipped=1)\r\ntest_deleted_canonical_input_still_invalidates (test_research_input_paths.ResearchInputPathTests.test_deleted_canonical_input_still_invalidates) ... ok\r\ntest_full_metadata_rejects_an_unpinned_input_alias (test_research_input_paths.ResearchInputPathTests.test_full_metadata_rejects_an_unpinned_input_alias) ... ok\r\ntest_metadata_resolution_requires_canonical_git_paths (test_research_input_paths.ResearchInputPathTests.test_metadata_resolution_requires_canonical_git_paths) ... ok\r\ntest_planner_rejects_alias_instead_of_silently_skipping (test_research_input_paths.ResearchInputPathTests.test_planner_rejects_alias_instead_of_silently_skipping) ... ok\r\ntest_real_git_change_rejects_preexisting_alias_manifest (test_research_input_paths.ResearchInputPathTests.test_real_git_change_rejects_preexisting_alias_manifest) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 2.163s\r\n\r\nOK\r\n"
+  },
+  "native_full_metadata_probe": {
+    "aliases": [
+      {
+        "requested_form": "ascii",
+        "core.precomposeunicode": "false",
+        "tracked": "src/dep.json",
+        "alias": "SRC/dep.json",
+        "aliases_physically": true,
+        "old_full_metadata": "accepted",
+        "old_plan": [],
+        "repaired_validation": "exact-Git rejection",
+        "repaired_plan": "exact-Git rejection"
+      },
+      {
+        "requested_form": "ascii",
+        "core.precomposeunicode": "false",
+        "tracked": "src/dep.json",
+        "alias": "src/DEP.json",
+        "aliases_physically": true,
+        "old_full_metadata": "accepted",
+        "old_plan": [],
+        "repaired_validation": "exact-Git rejection",
+        "repaired_plan": "exact-Git rejection"
+      },
+      {
+        "requested_form": "ascii",
+        "core.precomposeunicode": "false",
+        "tracked": "src/dep.json",
+        "alias": "SRC/DEP.json",
+        "aliases_physically": true,
+        "old_full_metadata": "accepted",
+        "old_plan": [],
+        "repaired_validation": "exact-Git rejection",
+        "repaired_plan": "exact-Git rejection"
+      },
+      {
+        "requested_form": "NFC",
+        "core.precomposeunicode": "false",
+        "tracked": "src/caf\u00e9.json",
+        "alias": "src/cafe\u0301.json",
+        "aliases_physically": false,
+        "old_full_metadata": "missing-file",
+        "old_plan": [],
+        "repaired_validation": "exact-Git rejection",
+        "repaired_plan": "exact-Git rejection"
+      },
+      {
+        "requested_form": "NFC",
+        "core.precomposeunicode": "true",
+        "tracked": "src/caf\u00e9.json",
+        "alias": "src/cafe\u0301.json",
+        "aliases_physically": false,
+        "old_full_metadata": "missing-file",
+        "old_plan": [],
+        "repaired_validation": "exact-Git rejection",
+        "repaired_plan": "exact-Git rejection"
+      },
+      {
+        "requested_form": "NFD",
+        "core.precomposeunicode": "false",
+        "tracked": "src/cafe\u0301.json",
+        "alias": "src/caf\u00e9.json",
+        "aliases_physically": false,
+        "old_full_metadata": "missing-file",
+        "old_plan": [],
+        "repaired_validation": "exact-Git rejection",
+        "repaired_plan": "exact-Git rejection"
+      },
+      {
+        "requested_form": "NFD",
+        "core.precomposeunicode": "true",
+        "tracked": "src/cafe\u0301.json",
+        "alias": "src/caf\u00e9.json",
+        "aliases_physically": false,
+        "old_full_metadata": "missing-file",
+        "old_plan": [],
+        "repaired_validation": "exact-Git rejection",
+        "repaired_plan": "exact-Git rejection"
+      }
+    ],
+    "canonical_full_metadata_and_plan_pairs": 10
+  },
+  "scope": "Native fixture and test-harness verification; no supplier or theorem replay"
+}
