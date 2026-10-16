@@ -1,0 +1,2 @@
+native-observations.json -text whitespace=cr-at-eol
+registered-replay.log -text whitespace=cr-at-eol

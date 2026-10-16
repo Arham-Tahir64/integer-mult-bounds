@@ -1,0 +1,439 @@
+{
+  "status": "PASS_NATIVE_WINDOWS_HEAD_SPELLING",
+  "head": "3cb500b743f36e13d21b6a46f126846bf36bad32",
+  "baseline": "836b19bfa309ceafbc8ee32a15e8c4b10dde7e11",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "python": "3.12.10",
+  "git": "git version 2.45.1.windows.1",
+  "unicode_and_rename": [
+    {
+      "mode": "false",
+      "created_form": "NFC",
+      "unicode_alias_exists": false,
+      "case_same_file": true,
+      "win32_aliases_same_file": [
+        "src./dep.json",
+        "src/dep.json.",
+        "src/dep.json "
+      ],
+      "head_spelling": "src/caf\u00e9.json",
+      "diff_nul_hex": "7372632f636166c3a92e6a736f6e00",
+      "alternate_rejected": "src/cafe\u0301.json",
+      "canonical_selected": [
+        "research/alpha"
+      ],
+      "case_rename_selected": [
+        "research/alpha",
+        "research/beta"
+      ],
+      "case_rename_diff_nul_hex": "5352432f6465702e6a736f6e007372632f6465702e6a736f6e00"
+    },
+    {
+      "mode": "false",
+      "created_form": "NFD",
+      "unicode_alias_exists": false,
+      "case_same_file": true,
+      "win32_aliases_same_file": [
+        "src./dep.json",
+        "src/dep.json.",
+        "src/dep.json "
+      ],
+      "head_spelling": "src/cafe\u0301.json",
+      "diff_nul_hex": "7372632f63616665cc812e6a736f6e00",
+      "alternate_rejected": "src/caf\u00e9.json",
+      "canonical_selected": [
+        "research/alpha"
+      ],
+      "case_rename_selected": [
+        "research/alpha",
+        "research/beta"
+      ],
+      "case_rename_diff_nul_hex": "5352432f6465702e6a736f6e007372632f6465702e6a736f6e00"
+    },
+    {
+      "mode": "true",
+      "created_form": "NFC",
+      "unicode_alias_exists": false,
+      "case_same_file": true,
+      "win32_aliases_same_file": [
+        "src./dep.json",
+        "src/dep.json.",
+        "src/dep.json "
+      ],
+      "head_spelling": "src/caf\u00e9.json",
+      "diff_nul_hex": "7372632f636166c3a92e6a736f6e00",
+      "alternate_rejected": "src/cafe\u0301.json",
+      "canonical_selected": [
+        "research/alpha"
+      ],
+      "case_rename_selected": [
+        "research/alpha",
+        "research/beta"
+      ],
+      "case_rename_diff_nul_hex": "5352432f6465702e6a736f6e007372632f6465702e6a736f6e00"
+    },
+    {
+      "mode": "true",
+      "created_form": "NFD",
+      "unicode_alias_exists": false,
+      "case_same_file": true,
+      "win32_aliases_same_file": [
+        "src./dep.json",
+        "src/dep.json.",
+        "src/dep.json "
+      ],
+      "head_spelling": "src/cafe\u0301.json",
+      "diff_nul_hex": "7372632f63616665cc812e6a736f6e00",
+      "alternate_rejected": "src/caf\u00e9.json",
+      "canonical_selected": [
+        "research/alpha"
+      ],
+      "case_rename_selected": [
+        "research/alpha",
+        "research/beta"
+      ],
+      "case_rename_diff_nul_hex": "5352432f6465702e6a736f6e007372632f6465702e6a736f6e00"
+    }
+  ],
+  "full_metadata_comparisons": [
+    {
+      "mode": "false",
+      "created_form": "NFC",
+      "alias": "SRC/dep.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFC",
+      "alias": "src/DEP.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFC",
+      "alias": "SRC/DEP.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFC",
+      "alias": "src./dep.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFC",
+      "alias": "src/dep.json.",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFC",
+      "alias": "src/dep.json ",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFC",
+      "alias": "src/cafe\u0301.json",
+      "physical_file_exists": false,
+      "baseline_accepts": false,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFD",
+      "alias": "SRC/dep.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFD",
+      "alias": "src/DEP.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFD",
+      "alias": "SRC/DEP.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFD",
+      "alias": "src./dep.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFD",
+      "alias": "src/dep.json.",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFD",
+      "alias": "src/dep.json ",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "false",
+      "created_form": "NFD",
+      "alias": "src/caf\u00e9.json",
+      "physical_file_exists": false,
+      "baseline_accepts": false,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFC",
+      "alias": "SRC/dep.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFC",
+      "alias": "src/DEP.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFC",
+      "alias": "SRC/DEP.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFC",
+      "alias": "src./dep.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFC",
+      "alias": "src/dep.json.",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFC",
+      "alias": "src/dep.json ",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFC",
+      "alias": "src/cafe\u0301.json",
+      "physical_file_exists": false,
+      "baseline_accepts": false,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFD",
+      "alias": "SRC/dep.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFD",
+      "alias": "src/DEP.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFD",
+      "alias": "SRC/DEP.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFD",
+      "alias": "src./dep.json",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFD",
+      "alias": "src/dep.json.",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFD",
+      "alias": "src/dep.json ",
+      "physical_file_exists": true,
+      "baseline_accepts": true,
+      "repair_rejects_at_head_boundary": true
+    },
+    {
+      "mode": "true",
+      "created_form": "NFD",
+      "alias": "src/caf\u00e9.json",
+      "physical_file_exists": false,
+      "baseline_accepts": false,
+      "repair_rejects_at_head_boundary": true
+    }
+  ],
+  "canonical_validator_calls": 8,
+  "planner_alias_controls": [
+    {
+      "alias": "SRC/dep.json",
+      "same_file": true,
+      "baseline_empty_matrix": true,
+      "repair_rejects_without_output": true,
+      "canonical_selected": [
+        "research/alpha"
+      ]
+    },
+    {
+      "alias": "src/DEP.json",
+      "same_file": true,
+      "baseline_empty_matrix": true,
+      "repair_rejects_without_output": true,
+      "canonical_selected": [
+        "research/alpha"
+      ]
+    },
+    {
+      "alias": "SRC/DEP.json",
+      "same_file": true,
+      "baseline_empty_matrix": true,
+      "repair_rejects_without_output": true,
+      "canonical_selected": [
+        "research/alpha"
+      ]
+    },
+    {
+      "alias": "src./dep.json",
+      "same_file": true,
+      "baseline_empty_matrix": true,
+      "repair_rejects_without_output": true,
+      "canonical_selected": [
+        "research/alpha"
+      ]
+    },
+    {
+      "alias": "src/dep.json.",
+      "same_file": true,
+      "baseline_empty_matrix": true,
+      "repair_rejects_without_output": true,
+      "canonical_selected": [
+        "research/alpha"
+      ]
+    },
+    {
+      "alias": "src/dep.json ",
+      "same_file": true,
+      "baseline_empty_matrix": true,
+      "repair_rejects_without_output": true,
+      "canonical_selected": [
+        "research/alpha"
+      ]
+    }
+  ],
+  "source_bytes_unchanged": true,
+  "fresh_import_cache": true,
+  "source_inventory": {
+    "research/replay-input-head-spelling/README.md": {
+      "git_blob": "e526f2cea6669929502f87d3a7dc0d7e0e39d5e9",
+      "sha256": "a6167bf5046687ef478d01dd4b9a6679fb645891471e7a0779ca29d2d155daf9"
+    },
+    "research/replay-input-head-spelling/SOURCES.json": {
+      "git_blob": "f8ed130884a7e8c3eb81d11f1ac584cf24631fb0",
+      "sha256": "ce70cc7c34cda6a771a890e51298a97d54e59ed7dc7755ea76236de48133d7ef"
+    },
+    "research/replay-input-head-spelling/TASK.json": {
+      "git_blob": "df63f0cbcde183868a1a2b4d1559b05d09a609c4",
+      "sha256": "aae6704dbc3a7695648cb7dc7affb96f738eb1665f12ea7c5880c53453b4c1f9"
+    },
+    "research/replay-input-head-spelling/VERIFY.json": {
+      "git_blob": "2b00c98659d4e84b194f19c80cedf3955208c662",
+      "sha256": "61b53c1febfb2caf471622f80bbc845bb5ff531231cec312f39ad430f0198b33"
+    },
+    "research/replay-input-head-spelling/verify.py": {
+      "git_blob": "7ab5d1682b98dd7e0f14abad7de19439c84e9fae",
+      "sha256": "9e7ccf78a91242b0532c220ad194df27b1b12f9d62e2e3da0c237817ee45f2b3"
+    },
+    "scripts/find_overlap.py": {
+      "git_blob": "9afbfa99e5d2fd89abff02da1680b6176cbbba4b",
+      "sha256": "a11289dc1e0ce3500bddbb28f36fd24d15042808cdc422f14c2564658dbefb61"
+    },
+    "scripts/new_research_package.py": {
+      "git_blob": "eb1bdf8ff46b9ad2de1f85aa058a028735800395",
+      "sha256": "7d300bf45baffced49d2bbea795ce3abe5f860f0dc1172845fc352b398331f34"
+    },
+    "scripts/research_baseline.py": {
+      "git_blob": "6b607b36eefd65718120ade3c8187681f11bf879",
+      "sha256": "59d9b04dc33e1bb3f81506d187243435de4902138a038b935e36ebaa5f37db67"
+    },
+    "scripts/research_package.py": {
+      "git_blob": "fe0ce68e4f14f3a02abf728ed47d69dc4528c68f",
+      "sha256": "9fa01de454181bee6d52d159e86ea0f1ba462ab5ef08eaec7284de8c84ee5249"
+    },
+    "scripts/verify_selected_result.py": {
+      "git_blob": "200b5d535d5377cdb9e212fade3a7740b810105b",
+      "sha256": "c0cc23a8534d91c8d272195315c725213f13279815750ffdef055ec3adfbe911"
+    },
+    "tests/test_research_git_spelling.py": {
+      "git_blob": "38c2244e1c60c6a86bb39f556284d3def46144c9",
+      "sha256": "5b21271c1daacb69f9214a4f6f22282cafbd232bf1a31b8e2e3c5c16f5df4153"
+    },
+    "tests/test_research_input_paths.py": {
+      "git_blob": "e8fcf5a1831c9e3f61cb48369da15f855430ff9d",
+      "sha256": "066e44a20ffd314aebb4d0f9c4836e06482c5612318931e6b5aa0756f2dac9d2"
+    },
+    "tests/test_research_onboarding.py": {
+      "git_blob": "22346dd55416b6afe2d1b6d97a4acdbd85f352b0",
+      "sha256": "9de6225a720146027d4936f332d65d2f50c031279548969f1a8ea31fa3e08b96"
+    }
+  },
+  "scope": "Native Windows on this case-insensitive, Unicode-preserving volume. Authenticated author fixtures and an adapted ToikY probe; not a separate verifier or human review. No tracked-name collisions, concurrent-writer, hosted-CI or supplier claim."
+}

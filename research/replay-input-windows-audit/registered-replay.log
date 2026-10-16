@@ -1,0 +1,29 @@
+CHECK Source-authenticated main omission versus live repaired CLI on three aliases and canonical controls, with exact target-only Git diffs and no partial output.
+PASS_REPLAY_INPUT_HEAD_SPELLING baseline_omissions=3 repaired_rejections=3 canonical_controls=2
+CHECK Nine actual Git/CLI and full-metadata regression groups for exact HEAD identity, deleted parents, case-only renames, Unicode, whitespace, staged/untracked inputs and Git failures.
+CHECK Retain all five lexical-input and deletion controls with a committed fixture inventory.
+PASS_REGISTERED_RESEARCH_PACKAGE research/replay-input-head-spelling outcome=completed
+test_canonical_deleted_parent_and_unrelated_changes (test_research_git_spelling.GitInputSpellingTests.test_canonical_deleted_parent_and_unrelated_changes) ... ok
+test_case_aliases_reject_a_target_only_git_diff (test_research_git_spelling.GitInputSpellingTests.test_case_aliases_reject_a_target_only_git_diff) ... ok
+test_case_only_rename_selects_both_exact_consumers (test_research_git_spelling.GitInputSpellingTests.test_case_only_rename_selects_both_exact_consumers) ... ok
+test_git_failure_cannot_publish_a_partial_matrix (test_research_git_spelling.GitInputSpellingTests.test_git_failure_cannot_publish_a_partial_matrix) ... ok
+test_metadata_uses_the_same_exact_head_inventory (test_research_git_spelling.GitInputSpellingTests.test_metadata_uses_the_same_exact_head_inventory) ... ok
+test_missing_head_cannot_publish_a_partial_matrix (test_research_git_spelling.GitInputSpellingTests.test_missing_head_cannot_publish_a_partial_matrix) ... ok
+test_nul_framing_preserves_spaces_tabs_and_newlines (test_research_git_spelling.GitInputSpellingTests.test_nul_framing_preserves_spaces_tabs_and_newlines) ... skipped 'Windows forbids control characters in filenames'
+test_unicode_spelling_is_not_normalized (test_research_git_spelling.GitInputSpellingTests.test_unicode_spelling_is_not_normalized) ... ok
+test_untracked_and_staged_only_inputs_reject_until_committed (test_research_git_spelling.GitInputSpellingTests.test_untracked_and_staged_only_inputs_reject_until_committed) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 8.482s
+
+OK (skipped=1)
+test_deleted_canonical_input_still_invalidates (test_research_input_paths.ResearchInputPathTests.test_deleted_canonical_input_still_invalidates) ... ok
+test_full_metadata_rejects_an_unpinned_input_alias (test_research_input_paths.ResearchInputPathTests.test_full_metadata_rejects_an_unpinned_input_alias) ... ok
+test_metadata_resolution_requires_canonical_git_paths (test_research_input_paths.ResearchInputPathTests.test_metadata_resolution_requires_canonical_git_paths) ... ok
+test_planner_rejects_alias_instead_of_silently_skipping (test_research_input_paths.ResearchInputPathTests.test_planner_rejects_alias_instead_of_silently_skipping) ... ok
+test_real_git_change_rejects_preexisting_alias_manifest (test_research_input_paths.ResearchInputPathTests.test_real_git_change_rejects_preexisting_alias_manifest) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.756s
+
+OK
