@@ -102,7 +102,8 @@ The verifier checks every live source's SHA256 and Git blob identity, then
 requires exact equality with the committed result. `--write-result` explicitly
 regenerates that result for development. Successful direct execution was
 checked on Windows with CPython 3.12.14; the registered replay and optimized
-cross-version checks are recorded in the contribution PR.
+cross-version checks are recorded in the
+[canonical finding](https://github.com/CrocSwap/integer-mult-bounds/discussions/2612#discussioncomment-18991086).
 
 SOURCES.json uses the standard base-commit pins for retained main inputs.
 VENDOR.json records original PR paths, commit, SHA256 and Git blob identities
