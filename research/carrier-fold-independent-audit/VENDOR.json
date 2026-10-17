@@ -1,0 +1,44 @@
+{
+  "repository": "CrocSwap/integer-mult-bounds",
+  "pull_request": 3133,
+  "head": "51eb9c4ee9e4722010d308aa3309e039d3940cc2",
+  "files": [
+    {
+      "path": "research/carrier-fold-independent-audit/vendor/EDITS.json",
+      "source_path": "research/rank7-coupled-586-588-carrier-fold/edits/EDITS.json",
+      "git_blob": "1d263e5af6f8655672b3add7fe44c7ff4131ddbd",
+      "sha256": "47831d52490e3a3b8ed0569ff644582ea23f60e2ef900c2301d04c60bd73f5d4"
+    },
+    {
+      "path": "research/carrier-fold-independent-audit/vendor/FINAL-WORD-base.json.gz",
+      "source_path": "research/rank7-coupled-586-588-carrier-fold/edits/FINAL-WORD-base.json.gz",
+      "git_blob": "cb4cc24a4545944627ad595c0c5080196952b9f0",
+      "sha256": "300a9b8ad1d554f0e6f84f43f3f5fd870a5b4e5f81ad856900b6e8999684892e"
+    },
+    {
+      "path": "research/carrier-fold-independent-audit/vendor/FINAL-WORD-extra.json.gz",
+      "source_path": "research/rank7-coupled-586-588-carrier-fold/edits/FINAL-WORD-extra.json.gz",
+      "git_blob": "decc8f26d8aab108baf75f0d8b2d1012eb06d076",
+      "sha256": "495d030f1e03b90e954dad3043994f03293d41b9ed220a3beaef849df435d3f0"
+    },
+    {
+      "path": "research/carrier-fold-independent-audit/vendor/NOTICE",
+      "source_path": "research/rank7-coupled-586-588-carrier-fold/NOTICE",
+      "git_blob": "89c20926ea7f803718f751d95989d5a269908efd",
+      "sha256": "c9731c9cca25ede32c2a1b3aef6d5b249973cb2ed5fb2494407bdca598763661"
+    },
+    {
+      "path": "research/carrier-fold-independent-audit/vendor/PROFILE.json",
+      "source_path": "research/rank7-coupled-586-588-carrier-fold/allocation/PROFILE.json",
+      "git_blob": "c2e88a0d61719338ef6b2f50b164df27fd3218d0",
+      "sha256": "a815694364065a6d1275c59c17235f4cf400d28d8f7fe3bb3314c57c35dee44c"
+    },
+    {
+      "path": "research/rank7-joint-endframes/allocation/DISPATCH.json",
+      "source_path": "research/rank7-coupled-586-588-carrier-fold/allocation/DISPATCH.json",
+      "git_blob": "9544fee4e6ee1f202cee22bfaeaf229ee3b2515e",
+      "sha256": "65e435bd68e97243c003677271b88485a29d4d0fae2dff1354100404a145e74c"
+    }
+  ],
+  "provenance": "Each source path was read with git show at the exact fetched PR head and its Git blob cross-checked before publication. Replay verifies the retained byte identities without requiring that external PR commit in local history."
+}

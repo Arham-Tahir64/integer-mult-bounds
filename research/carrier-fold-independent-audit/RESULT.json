@@ -1,0 +1,247 @@
+{
+  "aggregate_bill": {
+    "baseline_conditional_idle": {
+      "1": 17310,
+      "3": 4956,
+      "5": 1728,
+      "48": 28190
+    },
+    "baseline_profile": {
+      "1": 1637688,
+      "2": 474192,
+      "3": 159468,
+      "4": 71928,
+      "5": 13716,
+      "8": 5328,
+      "48": 28190
+    },
+    "calls": {
+      "extra": 416,
+      "gauge44": 250
+    },
+    "conditional_idle": {
+      "1": 17314,
+      "3": 4893,
+      "5": 1390,
+      "39": 1,
+      "48": 28256
+    },
+    "idle_delta": {
+      "1": 4,
+      "3": -63,
+      "5": -338,
+      "39": 1,
+      "48": 66
+    },
+    "profile": {
+      "1": 1637692,
+      "2": 482184,
+      "3": 156741,
+      "4": 67932,
+      "5": 14710,
+      "8": 5328,
+      "39": 1,
+      "48": 28256
+    },
+    "rank_mass": 4816512,
+    "status": "arithmetic decomposition only; owner packing and idle legality are not checked"
+  },
+  "algebra_fixture_checks": 4,
+  "providers": {
+    "base": {
+      "baseline_profile": {
+        "1": 2433,
+        "2": 712,
+        "3": 232,
+        "4": 108,
+        "5": 18,
+        "8": 8
+      },
+      "failure_controls": {
+        "endpoint_lowering_without_gate_refit": "nonmonotone frame at endpoint: 586",
+        "flipped_fold_75_with_regenerated_cleanup": "endpoint forward row 136",
+        "flipped_fold_84_with_regenerated_cleanup": "endpoint forward row 134",
+        "private_buffer_pollution": "zero private-buffer return",
+        "restored_old_B_52_with_regenerated_cleanup": "restored boundary column 586",
+        "restored_old_B_57_with_regenerated_cleanup": "restored boundary column 588",
+        "unshifted_warp_chronology": "endpoint forward row 113",
+        "wrong_rank_seven_endpoint": "nonmonotone frame at endpoint: 586"
+      },
+      "independent_inputs": 632,
+      "inventory": {
+        "4": 26,
+        "5": 2,
+        "6": 18,
+        "7": 50,
+        "8": 99,
+        "9": 213
+      },
+      "isolated_folds": [
+        {
+          "fold_only_fixed_path_delta": {
+            "1": 1,
+            "2": 6,
+            "3": -2,
+            "4": -3,
+            "5": 1
+          },
+          "id": "B_586_438",
+          "profile_delta": {
+            "2": 6,
+            "3": -2,
+            "4": -3,
+            "5": 1
+          },
+          "surrogate_coupled_price": -2091965,
+          "surrogate_fold_only_fixed_path_price": 24706,
+          "surrogate_guide_margin": 665,
+          "width_delta": {
+            "6": 1,
+            "7": -1
+          }
+        },
+        {
+          "fold_only_fixed_path_delta": {
+            "1": 1,
+            "2": 6,
+            "3": -2,
+            "4": -3,
+            "5": 1
+          },
+          "id": "B_588_440",
+          "profile_delta": {
+            "2": 6,
+            "3": -2,
+            "4": -3,
+            "5": 1
+          },
+          "surrogate_coupled_price": -2091965,
+          "surrogate_fold_only_fixed_path_price": 24706,
+          "surrogate_guide_margin": 665,
+          "width_delta": {
+            "6": 1,
+            "7": -1
+          }
+        }
+      ],
+      "orientations": [
+        "forward",
+        "dual"
+      ],
+      "profile": {
+        "1": 2433,
+        "2": 724,
+        "3": 228,
+        "4": 102,
+        "5": 20,
+        "8": 8
+      },
+      "profile_delta": {
+        "2": 12,
+        "3": -4,
+        "4": -6,
+        "5": 2
+      },
+      "zero_buffers": 91
+    },
+    "extra": {
+      "baseline_profile": {
+        "1": 2433,
+        "2": 712,
+        "3": 232,
+        "4": 108,
+        "5": 18,
+        "8": 8
+      },
+      "failure_controls": {
+        "endpoint_lowering_without_gate_refit": "nonmonotone frame at endpoint: 586",
+        "flipped_fold_75_with_regenerated_cleanup": "endpoint forward row 136",
+        "flipped_fold_84_with_regenerated_cleanup": "endpoint forward row 134",
+        "private_buffer_pollution": "zero private-buffer return",
+        "restored_old_B_52_with_regenerated_cleanup": "restored boundary column 586",
+        "restored_old_B_57_with_regenerated_cleanup": "restored boundary column 588",
+        "unshifted_warp_chronology": "endpoint forward row 113",
+        "wrong_rank_seven_endpoint": "nonmonotone frame at endpoint: 586"
+      },
+      "independent_inputs": 632,
+      "inventory": {
+        "4": 26,
+        "5": 2,
+        "6": 18,
+        "7": 50,
+        "8": 99,
+        "9": 213
+      },
+      "isolated_folds": [
+        {
+          "fold_only_fixed_path_delta": {
+            "1": 1,
+            "2": 6,
+            "3": -2,
+            "4": -3,
+            "5": 1
+          },
+          "id": "B_586_438",
+          "profile_delta": {
+            "2": 6,
+            "3": -2,
+            "4": -3,
+            "5": 1
+          },
+          "surrogate_coupled_price": -2091965,
+          "surrogate_fold_only_fixed_path_price": 24706,
+          "surrogate_guide_margin": 665,
+          "width_delta": {
+            "6": 1,
+            "7": -1
+          }
+        },
+        {
+          "fold_only_fixed_path_delta": {
+            "1": 1,
+            "2": 6,
+            "3": -2,
+            "4": -3,
+            "5": 1
+          },
+          "id": "B_588_440",
+          "profile_delta": {
+            "2": 6,
+            "3": -2,
+            "4": -3,
+            "5": 1
+          },
+          "surrogate_coupled_price": -2091965,
+          "surrogate_fold_only_fixed_path_price": 24706,
+          "surrogate_guide_margin": 665,
+          "width_delta": {
+            "6": 1,
+            "7": -1
+          }
+        }
+      ],
+      "orientations": [
+        "forward",
+        "dual"
+      ],
+      "profile": {
+        "1": 2433,
+        "2": 724,
+        "3": 228,
+        "4": 102,
+        "5": 20,
+        "8": 8
+      },
+      "profile_delta": {
+        "2": 12,
+        "3": -4,
+        "4": -6,
+        "5": 2
+      },
+      "zero_buffers": 91
+    }
+  },
+  "scope": "Exact free-operator endpoints and finite-set frame recount; native phase, ownership, physical stock, optimized single-move claims and outer admission unverified.",
+  "source_head": "51eb9c4ee9e4722010d308aa3309e039d3940cc2",
+  "status": "PASS_CARRIER_FOLD_INDEPENDENT_AUDIT"
+}

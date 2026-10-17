@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/rank7-joint-endframes/data/WORD-base.json.gz",
+    "research/rank7-joint-endframes/data/WORD-extra.json.gz",
+    "research/rank7-restore-substitution-audit/frames.py",
+    "research/carrier-fold-independent-audit/vendor/EDITS.json",
+    "research/carrier-fold-independent-audit/vendor/FINAL-WORD-base.json.gz",
+    "research/carrier-fold-independent-audit/vendor/FINAL-WORD-extra.json.gz",
+    "research/carrier-fold-independent-audit/vendor/NOTICE",
+    "research/carrier-fold-independent-audit/vendor/PROFILE.json",
+    "research/rank7-joint-endframes/construction/STAGE-PRICES.json",
+    "research/rank7-restore-carrier-skips/allocation/PROFILE.json",
+    "research/rank7-joint-endframes/allocation/DISPATCH.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact all-column free-operator endpoints, dirty restored boundary, zero private buffers, finite-set frame/profile recount, valid fixed-path losing controls, 16 semantic/frame failure controls, four algebra fixtures, source identities and conditional aggregate arithmetic."
+    }
+  ]
+}

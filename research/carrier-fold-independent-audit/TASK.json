@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "task_id": "independent-moment",
+  "priority_revision": 6,
+  "base_commit": "997e6a9ca7b4f95d50e366f61412fd640d72a88a",
+  "original_card": {
+    "id": "independent-moment",
+    "question": "Does one changed supplier or assembly claim lack a source-bound independent check of a specific new implication?",
+    "starting_points": [
+      "certificates/selected-result.json",
+      "research/rank7-joint-endframes/README.md",
+      "docs/research/research-family-status.md"
+    ],
+    "methods": [
+      "Independently reconstruct a coordinated frame/circuit change and its single-change control, then derive the complete rank and physical ledger.",
+      "Implement certified moment inequalities through a different exact enclosure method."
+    ],
+    "acceptance_gate": "Demonstrate independence, source binding, positive cases and semantic failure controls. Name the existing checks and the missing coverage. More digits or another equivalent evaluation of an unchanged root is not by itself new verification coverage.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read #2979 joint rank-7 end-frame proposal and the revision-6 evidence status. Its claimed kappa is not selected. Compare coordinated changes with the losing single-change controls and locate the complete physical ledger; an aggregate moment alone does not validate the mechanism.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Prioritize a bounded independent audit of #2979: reconstruct one joint group and its single-lowering control, check the declared frames/chronology, then trace changed children, idle widths and cleanup buffers into the complete invoice and both supplier caps. Choose one still-missing implication after checking existing audits. Stop with exact unresolved dependencies if full admission exceeds the session; do not launch a new lowering census on an unvalidated premise or substitute extra root digits for mechanism checking.",
+    "bottleneck_link": "Independent pricing prevents unsupported frontier claims and can reveal genuine accounting slack.",
+    "allowed_variations": [
+      "Reconstruct either a source ledger or a numeric enclosure with a different method."
+    ],
+    "scope_change_triggers": [
+      "Importing the primary function and calling its output independent verification.",
+      "Promoting #2979 from merged source archive to validated supplier solely from author PASS receipts or aggregate pricing."
+    ],
+    "overlap_terms": [
+      "independent moment",
+      "rank histogram",
+      "exact enclosure",
+      "2979",
+      "rank7 joint endframes",
+      "paired extraction",
+      "joint lowering"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Independent free-operator dirty-state audit and finite-set frame/profile recount of PR3133 coupled B/restore carrier folds on helpers 586 and 588; valid fixed-path fold-only controls and conditional aggregate invoice decomposition.",
+  "scope_change_reason": "The original PR2979 groups already have independent joint-frame and V45 audits. New PR3133 at 51eb9c4ee9e4722010d308aa3309e039d3940cc2 changes the scalar program together with terminal frames; this is one still-missing independent implication in the same card, not a new lowering census.",
+  "bottleneck_link": "Coupled topology and endpoint changes alter the local profile and helper inventory. Independent dirty-state semantics and pricing check whether this mechanism is valid before any physical supplier admission or frontier claim.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after source-bound algebra, literal frame/profile changes and conditional aggregate arithmetic. Do not expand construction or claim native/owner/outer admission.",
+  "outcome": "partial",
+  "evidence": "RESULT.json: 632 independent dirty inputs, forward and dual, both providers and baseline/candidate; 91 boundary rows and zero buffers; two isolated folds per provider; 16 actual-word rejection controls; four hand-derived algebra fixtures; exact local and aggregate arithmetic.",
+  "author": "Arham Tahir",
+  "ai_assistance": "Substantial OpenAI Codex assistance for investigation, new code, proof explanation, verification and submission. No independent human review claimed.",
+  "open_questions": [
+    {
+      "question": "Do the changed rank-six residual adapters realize the exact helper 586/588 native frame pairs, including phase?",
+      "why_it_matters": "The free-operator identity assumes physical realization and does not validate Gaussian wrappers.",
+      "first_step": "Pin PR3133 derived adapter manifest, then independently compare literal operators to each new entrance/exit frame pair.",
+      "blocked_by": "Separate native phase/operator replay; no full supplier admission in this audit."
+    },
+    {
+      "question": "Is the changed conditional idle remainder realized by a legal chronological owner packing?",
+      "why_it_matters": "The local width change requires a new idle bill; aggregate rank-mass balance alone does not establish it.",
+      "first_step": "Pin PR3133 FILL, ORDER, DISPATCH and changed provider widths; independently check ownership, full-window eligibility and chronological placement.",
+      "blocked_by": "Independent owner/packing replay, outside the scalar and finite-frame scope."
+    }
+  ],
+  "upstream_checkpoint": {
+    "commit": "997e6a9ca7b4f95d50e366f61412fd640d72a88a",
+    "checked_at": "2026-10-17T07:18:49Z",
+    "priority_revision": 6,
+    "guidance_changed": false
+  },
+  "canonical_thread": "https://github.com/CrocSwap/integer-mult-bounds/discussions/2612#discussioncomment-18991086",
+  "overlap": {
+    "entry_open_pr_records": 258,
+    "entry_discussion_records": 1889,
+    "final_open_pr_records": 261,
+    "final_discussion_records": 1892,
+    "complete_pagination": true,
+    "final_snapshot_at": "2026-10-17T07:19:18.566430+00:00",
+    "concurrent_audit": {
+      "pr": 3136,
+      "head": "3e73133a7b6a73d9433a2e33dc3404d8d049f20d",
+      "author": "Arham-Tahir64",
+      "scope": "Same local folds, broader independently implemented binary-warp and failure-control checks; read after this interpreter/result were completed."
+    },
+    "limitations": "PR bodies, discussion records and local package notes were searched, not arbitrary unpublished code. Cache-backed overlap search reports offline freshness warnings despite the explicitly completed remote refresh."
+  },
+  "disposition": "Retain public source commit and add corroboration plus aggregate-idle arithmetic evidence to the existing investigation/PR3136. No duplicate same-scope PR and no exclusive novelty claim."
+}
